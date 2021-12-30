@@ -1,0 +1,23 @@
+{
+  "name": "kakaowork-grafana-webhook",
+  "version": "1.0.0",
+  "description": "simple body parser for grafana and kakaowork",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/index.js"
+  },
+  "author": "hooni.min",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.2",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5"
+  }
+}
