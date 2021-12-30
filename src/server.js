@@ -8,7 +8,7 @@ server.initServer = function(){
     const app = express();
     // configmap 으로 부터 읽어오기
     // 웹훅서버 추가시에 컨피그맵만 변경하도록
-    const servers = JSON.parse(fs.readFileSync("./servers/webhookServer.json"))
+    const servers = JSON.parse(fs.readFileSync("etc/config/webhookServer.json"))
     console.log(servers);
     app.use(express.json())
 
