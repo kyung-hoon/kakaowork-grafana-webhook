@@ -1,11 +1,8 @@
 
-let parser= {};
-
-parser.parse = async function(body) {
+export async function parse(body) {
     let output = new Object();
     const req = JSON.stringify(body)
-    output.text =body.greetings
+    output.text =req.greetings
     //파싱 로직 작성
     return output;
 }
-export default parser ;

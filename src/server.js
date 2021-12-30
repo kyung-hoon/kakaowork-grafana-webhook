@@ -1,8 +1,15 @@
 import fs  from "fs";
 import express  from "express";
-import parser  from "./parser.js"
+import {parse}  from "./parser.js"
+import {send} from "./sender.js"
 
 let server ={}; 
+
+async function defineOrg(body){
+    const org
+    //org를 통해 url 확인하기
+    return org;
+}
 
 server.initServer = function(){
     const app = express();
@@ -14,8 +21,8 @@ server.initServer = function(){
 
     app.post( '/', ( req, res ) => {
         console.log( 'received webhook', req.body );
-        const parsedOutput=  parser.parse(req.body)
-        console.log(parsedOutput)
+        const parsedOutput=  await parse(req.body)
+        await send(await defineOrg(req.body),parsedOutput);
         res.sendStatus( 200 );
 });
 
